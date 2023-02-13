@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blue',
+    'rest_framework',
+    'quickstart',
 ]
 
 MIDDLEWARE = [
@@ -102,12 +104,10 @@ WSGI_APPLICATION = 'configurations.wsgi.application'
 
 # }  
 
-
 DATABASES = {  
-    'default' :{},
-    'users_db': {  
+    'default': {  
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'mult_db_1',  
+        'NAME': 'syn_djano',  
         'USER': 'root',  
         'PASSWORD': 'mysql123',  
         'HOST': '127.0.0.1',  
@@ -116,18 +116,34 @@ DATABASES = {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
         }  
     },
-    'blues_db': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'mult_db_2',  
-        'USER': 'root',  
-        'PASSWORD': 'mysql123',  
-        'HOST': '127.0.0.1',  
-        'PORT': '3306',  
-        'OPTIONS': {  
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
-        }  
-    }    
-}  
+}
+
+
+# DATABASES = {  
+#     'default' :{},
+#     'users_db': {  
+#         'ENGINE': 'django.db.backends.mysql',  
+#         'NAME': 'mult_db_1',  
+#         'USER': 'root',  
+#         'PASSWORD': 'mysql123',  
+#         'HOST': '127.0.0.1',  
+#         'PORT': '3306',  
+#         'OPTIONS': {  
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+#         }  
+#     },
+#     'blues_db': {  
+#         'ENGINE': 'django.db.backends.mysql',  
+#         'NAME': 'mult_db_2',  
+#         'USER': 'root',  
+#         'PASSWORD': 'mysql123',  
+#         'HOST': '127.0.0.1',  
+#         'PORT': '3306',  
+#         'OPTIONS': {  
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+#         }  
+#     }    
+# }  
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -184,4 +200,4 @@ client_secret = 'jhgut534'
 
 # Creating database routers connections
 
-DATABASE_ROUTERS = ['routers.db_routers.AuthRouter','routers.db_routers.BlueRouter']
+# DATABASE_ROUTERS = ['routers.db_routers.AuthRouter','routers.db_routers.BlueRouter']

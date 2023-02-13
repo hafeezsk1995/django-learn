@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
     path('blue/', include('blue.urls')),
+    path('quickstart/', include('quickstart.urls')),
     path('register',user_views.register, name='register'),
     # (This is for finaceeper testings only)
     # url(r'^get_records/$',get_records),
